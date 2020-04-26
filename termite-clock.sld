@@ -44,6 +44,7 @@
              (m (modulo (quotient t 60) 60))
              (h (modulo (+ timezone (quotient t 3600)) 24)))
         (display "\r")
+        (display (if (< h 10) " " ""))
         (display h)
         (display (if (= t time) ":" " ")) ;; flash colon every 1/2 second
         (display (quotient m 10))
